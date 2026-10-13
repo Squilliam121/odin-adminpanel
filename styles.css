@@ -9,6 +9,19 @@ h1,h2,h3,h4,h5,h6,button,a,p,li,textarea{
     font-family: 'Roboto', sans-serif;
 }
 
+p{
+    color: rgb(99, 99, 99);;   
+    font-weight: 400;
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;        /* Change this number to however many lines you want to allow */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 h1{
     color: white;
     font-weight: 700;
@@ -20,6 +33,14 @@ h2{
     font-weight: 700;
     font-size: 1.5rem;
     padding: 0;
+    margin: 0;
+}
+
+h3{
+    color: black;   
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 0 0 5px 0;
     margin: 0;
 }
 
@@ -192,14 +213,13 @@ main{
 }
 
 #projects{
-    background-color: aqua;
     padding: 15px;
     display: flex;
     flex-direction: column;
     min-height: 0;
 }
 
-#projects h2{
+h2.mainh2{
     font-size: 1.1rem;
     font-weight: 500;
     padding: 10px 0;
@@ -278,4 +298,89 @@ textarea, input{
 .reactioncont svg:hover{
     cursor: pointer;
     fill: rgb(62, 56, 111);
+}
+
+#mini-sidebar{
+    display: grid;
+    grid-template: repeat(2,1fr)/1fr;
+    padding: 15px 15px 0 15px;
+    min-height: 0;
+}
+
+#announcements{
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+#announcementscont{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.3));
+    overflow-y: auto;
+}
+
+hr{
+    border: 1px rgb(224, 223, 223) solid;
+}
+
+.announcement:last-child hr{
+    visibility: hidden;
+}
+
+#trending{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#trendingcont{
+    align-items: center;
+    min-height: 0;
+    flex: 1;
+    display: grid;
+    grid-template: repeat(4,1fr)/1fr;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.3));
+    overflow-y: auto;
+}
+
+.account{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.accpfp{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.acctext{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.accuser{
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+.accdisplay{
+    color: rgb(99, 99, 99);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
